@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Plague Clicker</title>
+  </head>
+  <body>
+    <h1 id="bacteriaAmount">0 Bacteria(s)</h1>
+    <div id="navigateButtons">
+      <button onclick="tab('laboratoryMenu')">Laboratory</button>
+      <button onclick="tab('shopMenu')">Shop</button>
+      <button onclick="tab('upgradeMenu')">Upgrades</button>
+      <br><br>
+    </div>
+    <div id="laboratoryMenu">
+      <br><br>
+      <button onclick="makeBacteria()">Make a bacteria</button><br>
+    </div>
+    <div id="shopMenu">
+      <button onclick="toggleBulkBuying()" id="bulkBuyingButton">Buy 1</button> <br><br>
+      <button onclick="buyBacteriaPerClick()" id="perClickUpgrade">Study the bacterias to make more <br>(Currently Level 0) <br>Cost: 10 Bacterias</button>
+    </div>
+    <div id="upgradeMenu">
+      <br><br>
+      <button onclick="buyClickUpgrade1()" id="clickUpgrade1">Click Upgrade 1</button>
+    </div>
+    <script src="main.js" charset="utf-8" type="text/javascript"></script>
+  </body>
+</html>
