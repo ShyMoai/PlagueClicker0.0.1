@@ -15,8 +15,7 @@
             left: 0%;
             width: 25%;
             margin: left;
-            border-style: solid;
-            border-color: aqua;
+            color: white;
         }
         #buttonsBox {
             position: fixed;
@@ -27,13 +26,49 @@
             border-style: solid;
             border-color: aqua;
         }
+        #buildingsBox {
+            position: fixed;
+            top: 0%;
+            left: 30%;
+            width: 30%;
+            text-align: center;
+            text-align: top;
+            border-color: aqua;
+            gap: 16px;
+        }
+        #buildingsTitle {
+            top: 16px;
+            left: 30%;
+            width: 30;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 32px;
+            text-align: center;
+            display: inline-block;
+            background-color: rgb(196, 196, 196);
+            border-radius: 8px;
+        }
+        #buildingsTitle:active {
+            background-color: rgb(160, 160, 160);
+        }
         .bigButton {
             display: block;
             margin-left: auto;
             margin-right: auto;
             background-color:transparent;
             border-color: transparent;
-}
+        }
+        .building {
+            display: grid;
+            align-items: center;
+            text-align: left;
+            grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
+            margin: left;
+            border-radius: 16px;
+            width: 100%;
+            background-color: rgb(196, 196, 196);
+            line-height: 8px;
+        }
     </style>
     <body>
         <div class="box" id="resourcesBox">
@@ -41,6 +76,26 @@
         </div>
         <div class="box" id="buttonsBox">
             <button onclick="makeBacteria()" class="bigButton"><img src="https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/make.bacteriaIcon"></button>
+        </div>
+        <div class="box" id="buildingsBox">
+            <button onclick="cycleBulkBuying()" id="buildingsTitle"><h2>Buildings</h2><p id="bulkBuyingIndicator">Buying 1</p></button>
+            <div id="buildingList">
+                <button onclick="buyTest()" class="building" id="test">
+                    <div class="buildingIcon" id="testIcon">
+                        <img src="https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/testIcon">
+                    </div>
+                    <div class="buildingInfo" id="testInfo">
+                        <h2>Test</h2>
+                        <p id="testCounter">You have made 0 tests</p>
+                    </div>
+                    <div>
+                        <h1>   10</h1>
+                    </div>
+                    <div>
+                        <img src="https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/bacteriaIcon">
+                    </div>
+                </button>
+            </div>
         </div>
         <script src="main.js" charset="utf-8" type="text/javascript"></script>
     </body>
