@@ -23,8 +23,6 @@
             left: 0%;
             width: 25%;
             margin: auto;
-            border-style: solid;
-            border-color: aqua;
         }
         #buildingsBox {
             position: fixed;
@@ -33,7 +31,6 @@
             width: 30%;
             text-align: center;
             text-align: top;
-            border-color: aqua;
             gap: 16px;
         }
         #buildingsTitle {
@@ -50,6 +47,12 @@
         }
         #buildingsTitle:active {
             background-color: rgb(160, 160, 160);
+        }
+        #ant {
+            display: none;
+        }
+        #stringCounter {
+            display: none;
         }
         .bigButton {
             display: block;
@@ -73,6 +76,7 @@
     <body>
         <div class="box" id="resourcesBox">
             <h1 id="bacteriaCounter">0 bacteria</h1>
+            <h1 id="stringCounter" class="unlockable">0 string</h1>
         </div>
         <div class="box" id="buttonsBox">
             <button onclick="makeBacteria()" class="bigButton"><img src="https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/make.bacteriaIcon"></button>
@@ -89,7 +93,22 @@
                         <p id="testCounter">You have made 0 tests</p>
                     </div>
                     <div>
-                        <h1>   10</h1>
+                        <h1>10</h1>
+                    </div>
+                    <div>
+                        <img src="https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/bacteriaIcon">
+                    </div>
+                </button>
+                <button onclick="buyAnt()" class="building" class="unlockable" id="ant">
+                    <div class="buildingIcon" id="antIcon">
+                        <img src="https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/antIcon">
+                    </div>
+                    <div class="buildingInfo" id="antInfo">
+                        <h2>Ant</h2>
+                        <p id="antCounter">You have 0 ants</p>
+                    </div>
+                    <div>
+                        <h1>10M</h1>
                     </div>
                     <div>
                         <img src="https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/bacteriaIcon">
